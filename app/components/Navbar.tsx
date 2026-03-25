@@ -21,8 +21,8 @@ export default function Navbar() {
   }, []);
 
   const navClasses = mounted && isScrolled 
-    ? "py-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.1)]" 
-    : "py-8 bg-transparent";
+    ? "py-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.1)] z-[1000]" 
+    : "py-8 bg-transparent z-[1000]";
 
   const links = [
     { name: "Home", href: "#home" },
@@ -60,7 +60,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Area: Theme + Hamburger */}
-        <div className="flex items-center gap-4 relative z-[110]">
+        <div className="flex items-center gap-4 relative z-[2010]">
           <div className={isOpen ? 'text-white' : ''}>
             <ThemeToggle isScrolled={isScrolled} />
           </div>
@@ -75,7 +75,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-slate-950 transition-all duration-500 z-[100] flex flex-col items-center gap-6 pt-32 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`md:hidden fixed inset-0 bg-slate-950 transition-all duration-500 z-[2000] flex flex-col items-center gap-6 pt-32 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           {links.map((link, idx) => (
             <a 
               key={link.name} 
