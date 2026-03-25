@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   const navClasses = mounted && isScrolled 
-    ? "py-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.1)] z-[1000]" 
+    ? "py-4 bg-slate-900 border-b border-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.3)] z-[1000]" 
     : "py-8 bg-transparent z-[1000]";
 
   const links = [
