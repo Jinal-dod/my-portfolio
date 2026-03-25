@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   const navClasses = mounted && isScrolled 
-    ? "py-4 bg-white/95 dark:bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-[0_10px_30px_rgba(0,0,0,0.1)]" 
+    ? "py-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-[0_10px_30px_rgba(0,0,0,0.1)]" 
     : "py-8 bg-transparent";
 
   const links = [
@@ -45,8 +45,8 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex justify-center gap-10">
+        {/* Desktop Links - Definitively hidden on mobile */}
+        <div className="hidden md:flex items-center justify-center gap-8">
           {links.map((link) => (
             <a 
               key={link.name} 
