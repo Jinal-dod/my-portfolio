@@ -39,9 +39,9 @@ export default function Navbar() {
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center font-black text-white text-sm tracking-tighter shadow-[0_0_20px_rgba(139,92,246,0.2)] transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]">
             JD
           </div>
-          <div className="hidden sm:block">
-            <span className={`block font-black text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isOpen ? 'text-white' : (isScrolled ? 'text-slate-900' : 'text-foreground')}`}>Jinal Dod</span>
-            <span className={`block font-bold text-[8px] uppercase tracking-widest leading-none ${isOpen ? 'text-slate-400' : (isScrolled ? 'text-slate-500' : 'text-slate-500 dark:text-slate-400')}`}>Odoo Expert</span>
+          <div className="block">
+            <span className={`block font-black text-[10px] sm:text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isOpen ? 'text-white' : (isScrolled ? 'text-slate-900 dark:text-white' : 'text-foreground')}`}>Jinal Dod</span>
+            <span className={`block font-bold text-[7px] sm:text-[8px] uppercase tracking-widest leading-none ${isOpen ? 'text-slate-400' : (isScrolled ? 'text-slate-500' : 'text-slate-500 dark:text-slate-400')}`}>Odoo Expert</span>
           </div>
         </Link>
 
