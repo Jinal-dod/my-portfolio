@@ -78,7 +78,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-slate-950/98 backdrop-blur-3xl transition-all duration-500 z-50 flex flex-col justify-center items-center gap-6 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`md:hidden fixed inset-0 bg-slate-950/98 backdrop-blur-3xl transition-all duration-500 z-50 flex flex-col items-center gap-6 pt-24 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           {links.map((link, idx) => (
             <a 
               key={link.name} 
