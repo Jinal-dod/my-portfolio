@@ -15,7 +15,8 @@ const experiences = [
       <>Designed and implemented complete <span className="text-violet-400 font-bold">3PL logistics workflows</span> covering inbound, storage, picking, and packing.</>
     ],
     tech: ["Odoo JS", "Python", "PostgreSQL", "React", "APIs"],
-    color: "from-violet-600 to-indigo-600"
+    color: "from-violet-600 to-indigo-600",
+    logo: "/wanbuffer_logo.png"
   },
   {
     title: "Odoo Developer",
@@ -29,7 +30,8 @@ const experiences = [
       <>Conducted <span className="text-blue-400 font-bold">on-site client visits</span> (Dubai) for process mapping and requirement gathering.</>
     ],
     tech: ["Odoo", "API Integration", "QWeb", "Python"],
-    color: "from-indigo-600 to-blue-600"
+    color: "from-indigo-600 to-blue-600",
+    logo: "/kanak_logo.png"
   },
   {
     title: "Odoo Developer",
@@ -43,7 +45,8 @@ const experiences = [
       <>Upgraded, integrated, and maintained <span className="text-pink-400 font-bold">third-party payment gateways</span> including Klarna and Vipps.</>
     ],
     tech: ["Odoo v13-16", "M2O Widgets", "Payment Gateways", "Python"],
-    color: "from-pink-600 to-rose-600"
+    color: "from-pink-600 to-rose-600",
+    logo: "/odoo_logo.png"
   }
 ];
 
@@ -76,6 +79,15 @@ export default function Experience() {
               <div className="relative p-8 h-full glass rounded-[2.5rem] flex flex-col hover:border-violet-500/20 transition-all duration-700 overflow-hidden">
                 {/* Accent Glow */}
                 <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${exp.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-700`} />
+                
+                {/* Company Logo Watermark */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.03] dark:opacity-[0.05] grayscale group-hover:opacity-[0.07] transition-opacity duration-700 pointer-events-none">
+                  <img 
+                    src={exp.logo} 
+                    alt="" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 
                 <div className="mb-8">
                   <p className="text-[10px] font-black uppercase tracking-widest text-violet-400 mb-2">{exp.period}</p>
