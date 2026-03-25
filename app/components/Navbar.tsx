@@ -40,8 +40,8 @@ export default function Navbar() {
             JD
           </div>
           <div className="hidden sm:block">
-            <span className={`block font-black text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isScrolled ? 'text-slate-900' : 'text-foreground'}`}>Jinal Dod</span>
-            <span className={`block font-bold text-[8px] uppercase tracking-widest leading-none ${isScrolled ? 'text-slate-500' : 'text-slate-500 dark:text-slate-400'}`}>Odoo Expert</span>
+            <span className={`block font-black text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isOpen ? 'text-white' : (isScrolled ? 'text-slate-900' : 'text-foreground')}`}>Jinal Dod</span>
+            <span className={`block font-bold text-[8px] uppercase tracking-widest leading-none ${isOpen ? 'text-slate-400' : (isScrolled ? 'text-slate-500' : 'text-slate-500 dark:text-slate-400')}`}>Odoo Expert</span>
           </div>
         </Link>
 
@@ -60,7 +60,9 @@ export default function Navbar() {
 
         {/* Right Area: Theme + Hamburger */}
         <div className="flex items-center gap-4 relative z-[60]">
-          <ThemeToggle isScrolled={isScrolled} />
+          <div className={isOpen ? 'text-white' : ''}>
+            <ThemeToggle isScrolled={isScrolled} />
+          </div>
           
           <button 
             onClick={() => setIsOpen(!isOpen)}
