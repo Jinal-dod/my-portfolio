@@ -41,8 +41,8 @@ export default function Navbar() {
             JD
           </div>
           <div className="block">
-            <span className={`block font-black text-[10px] sm:text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isOpen ? 'text-white' : (isScrolled ? 'text-slate-900 dark:text-white' : 'text-slate-900 dark:text-white')}`}>Jinal Dod</span>
-            <span className={`block font-bold text-[7px] sm:text-[8px] uppercase tracking-widest leading-none ${isOpen ? 'text-slate-400' : (isScrolled ? 'text-slate-500' : 'text-slate-500 dark:text-slate-400')}`}>Odoo Expert</span>
+            <span className={`block font-black text-[10px] sm:text-xs uppercase tracking-[0.2em] leading-none mb-1 transition-colors ${isOpen || isScrolled ? 'text-white' : 'text-slate-900 dark:text-white'}`}>Jinal Dod</span>
+            <span className={`block font-bold text-[7px] sm:text-[8px] uppercase tracking-widest leading-none ${isOpen || isScrolled ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'}`}>Odoo Expert</span>
           </div>
         </Link>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
             <a 
               key={link.name} 
               href={link.href} 
-              className={`text-[11px] uppercase tracking-widest font-black transition-colors ${isScrolled ? 'text-slate-600 hover:text-violet-600' : 'text-slate-500 dark:text-slate-400 hover:text-violet-500 dark:hover:text-white'}`}
+              className={`text-[11px] uppercase tracking-widest font-black transition-colors ${isScrolled ? 'text-slate-400 hover:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-violet-500 dark:hover:text-white'}`}
             >
               {link.name}
             </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
         {/* Right Area: Theme + Hamburger */}
         <div className="flex items-center gap-4 relative z-[2010]">
-          <div className={isOpen ? 'text-white' : ''}>
+          <div className={isOpen || isScrolled ? 'text-white' : ''}>
             <ThemeToggle isScrolled={isScrolled} />
           </div>
           
