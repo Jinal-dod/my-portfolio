@@ -5,7 +5,7 @@ const education = [
   {
     title: "Bachelor of Engineering",
     institution: "Shantilal Shah Government Engineering College",
-    period: "01/2020",
+    period: "2016 - 2020",
     major: "Information Technology",
     points: [
       "Information Technology major with a focus on scalable architecture.",
@@ -18,7 +18,7 @@ const education = [
   {
     title: "Higher Secondary Education",
     institution: "Smt. R.C. Patel Secondary & Higher Secondary School",
-    period: "2016",
+    period: "2014 - 2016",
     major: "Science Stream",
     points: [
       "Completed Higher Secondary Education with a focus on Science.",

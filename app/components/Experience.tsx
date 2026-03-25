@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "Senior Odoo Developer",
     company: "Wanbuffer Services",
-    period: "03/2025 - Current",
+    period: "09/2025 - Current",
     points: [
       <>Led design, development, and customization of <span className="text-violet-400 font-bold">Odoo ERP solutions</span> across Inventory, Manufacturing, Sales, Purchase, and Accounting modules.</>,
       <>Developed advanced <span className="text-violet-400 font-bold">Activity Calendar</span> functionality for improved task planning, scheduling, and operational tracking.</>,
@@ -20,7 +20,7 @@ const experiences = [
   {
     title: "Odoo Developer",
     company: "Kanak Infosystems L.L.P.",
-    period: "08/2023 - 02/2025",
+    period: "08/2023 - 08/2025",
     points: [
       <>Designed and implemented <span className="text-blue-400 font-bold">custom Odoo modules</span> across sales, purchase, accounting, inventory, and POS.</>,
       <>Enhanced <span className="text-blue-400 font-bold">ERP workflows</span> through custom APIs and integrated <span className="text-blue-400 font-bold">third-party payment gateways</span>.</>,
