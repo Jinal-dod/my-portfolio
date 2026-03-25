@@ -77,11 +77,8 @@ export default function Experience() {
               className="flex flex-col group"
             >
               <div className="relative p-8 h-full glass rounded-[2.5rem] flex flex-col hover:border-violet-500/20 transition-all duration-700 overflow-hidden">
-                {/* Accent Glow */}
-                <div className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${exp.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-700`} />
-                
-                {/* Company Logo Watermark */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.03] dark:opacity-[0.05] grayscale group-hover:opacity-[0.07] transition-opacity duration-700 pointer-events-none">
+                {/* Company Logo Watermark - Full Card Size */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.06] grayscale group-hover:opacity-[0.08] transition-all duration-700 pointer-events-none p-12">
                   <img 
                     src={exp.logo} 
                     alt="" 
