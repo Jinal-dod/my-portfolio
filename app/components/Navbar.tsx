@@ -59,21 +59,17 @@ export default function Navbar() {
         </div>
 
         {/* Right Area: Theme + Hamburger */}
-        <div className="flex items-center gap-4 relative z-[60]">
+        <div className="flex items-center gap-4 relative z-[110]">
           <div className={isOpen ? 'text-white' : ''}>
             <ThemeToggle isScrolled={isScrolled} />
           </div>
           
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${isScrolled ? 'bg-slate-100 text-slate-900' : 'bg-white/5 text-foreground'}`}
+            className={`md:hidden p-2 rounded-xl transition-all duration-300 ${isOpen ? 'bg-white/10 text-white' : (isScrolled ? 'bg-slate-100 text-slate-900' : 'bg-white/10 text-white')}`}
             aria-label="Toggle Menu"
           >
-            <div className="w-5 h-4 relative flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-current transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-              <span className={`w-full h-0.5 bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-              <span className={`w-full h-0.5 bg-current transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-            </div>
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
