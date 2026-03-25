@@ -76,14 +76,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-background/98 backdrop-blur-2xl transition-all duration-500 z-50 flex flex-col justify-center items-center gap-8 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`md:hidden fixed inset-0 bg-slate-950/98 backdrop-blur-3xl transition-all duration-500 z-50 flex flex-col justify-center items-center gap-6 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           {links.map((link, idx) => (
             <a 
               key={link.name} 
               href={link.href} 
               onClick={() => setIsOpen(false)}
-              className={`text-2xl font-black uppercase tracking-tighter transition-all duration-500 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-              style={{ transitionDelay: `${idx * 100}ms` }}
+              className={`text-xl font-black uppercase tracking-tighter text-white transition-all duration-500 hover:text-violet-400 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+              style={{ transitionDelay: `${idx * 75}ms` }}
             >
               {link.name}
             </a>
